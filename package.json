@@ -11,7 +11,8 @@
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-coffeescript": "~2.2.2",
-    "docpad-plugin-datefromfilename": "~1.0.1"
+    "docpad-plugin-datefromfilename": "~1.0.1",
+    "docpad-plugin-cleanurls": "~2.5.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

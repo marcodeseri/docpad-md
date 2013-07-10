@@ -60,7 +60,5 @@
             <% end %>    
         <% end %>
     </section>
-
-    <%-@partial('sidebar.html.eco', @)%> 
     
 <%-@partial('footer.html.eco', @)%> 
