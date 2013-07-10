@@ -1,0 +1,47 @@
+<%-@partial('header.html.eco', @)%> 
+    <header id="page-heading">
+        <h1>Blog</h1>	
+    	<nav id="single-nav" class="clearfix"> 
+        
+            <% for document,documentIndex in @getCollection('posts').toJSON(): %>
+        
+                <!-- Get the current document, from there, we will be able to get the next and previous -->
+                <% if @document.id is document.id: %>
+             
+                    <!-- We have the current document, do the next and previous buttons -->
+                    
+                    <!-- Check if we have a previous page -->
+                    <% if documentIndex >= 1: %>
+                        <div id="single-nav-right"><a href="<%= @getCollection('posts').toJSON()[documentIndex-1].url %>" class="previous">Older <span class="awesome-icon-chevron-right"></span></a></div>
+                    <% end %>                      
+                <% end %>
+            <% end %>
+        
+        </nav>
+        <!-- /single-nav -->	
+    </header>
+    
+    
+    <article class="post clearfix">
+        <header>
+    		<h1 class="single-title"><%= @getPreparedTitle() %></h1>
+    		<div class="post-meta">
+                <span class="awesome-icon-calendar"></span>On  <%= @document.date.toDateString() %>
+                <span class="awesome-icon-user"></span>By <a href="/about" title="Posts by marco" rel="author">marco</a>            
+                     
+            </div>
+    	</header>
+    	<div class="entry clearfix">
+    		<div class="field-item even">
+    			<%- @content %>
+    		</div>
+    	
+    	</div>	
+    	<div class="clear"></div>
+    </article>
+    
+    
+
+    <%-@partial('sidebar.html.eco', @)%> 
+    
+<%-@partial('footer.html.eco', @)%> 

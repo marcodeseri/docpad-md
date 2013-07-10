@@ -1,0 +1,5 @@
+<%-@partial('header.html.eco', @)%> 
+
+    <%- @content %>
+    
+<%-@partial('footer.html.eco', @)%> 

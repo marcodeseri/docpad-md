@@ -1,0 +1,10 @@
+{"ts":1372841121341,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1372841124696,"patch":[[{"diffs":[[1,"<html>\r\n<head>\r\n    <title><%= @document.title %></title>\r\n    <%- @getBlock(\"meta\").toHTML() %>\r\n    <%- @getBlock(\"styles\").toHTML() %>\r\n</head>\r\n<body>\r\n    <%- @content %>\r\n    <%- @getBlock(\"scripts\").toHTML() %>\r\n</body>\r\n</html>"]],"start1":0,"start2":0,"length1":0,"length2":235}]],"length":235,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1372853673541,"patch":[[{"diffs":[[1,"<%- @import('./a-relative-eco-file.html.eco') %>\r\n\r\n"],[0,"<html>\r\n"]],"start1":0,"start2":0,"length1":8,"length2":60}]],"length":287,"saved":false}
+{"ts":1372853690920,"patch":[[{"diffs":[[0,"- @i"],[-1,"mport('./a-relative-eco-file"],[1,"nclude('./includes/header"],[0,".htm"]],"start1":2,"start2":2,"length1":36,"length2":33}]],"length":284,"saved":false}
+{"ts":1372854029967,"patch":[[{"diffs":[[0,"de('"],[-1,"./"],[0,"incl"]],"start1":10,"start2":10,"length1":10,"length2":8}]],"length":282,"saved":false}
+{"ts":1372855592997,"patch":[[{"diffs":[[0,"<%"],[-1,"-"],[1,"="],[0," @includ"]],"start1":0,"start2":0,"length1":11,"length2":11}]],"length":282,"saved":false}
+{"ts":1372855737964,"patch":[[{"diffs":[[0,"<%"],[-1,"="],[1,"-"],[0," @includ"]],"start1":0,"start2":0,"length1":11,"length2":11}]],"length":282,"saved":false}
+{"ts":1372855774922,"patch":[[{"diffs":[[0,"<%"],[-1,"-"],[1,"="],[0," @includ"]],"start1":0,"start2":0,"length1":11,"length2":11}]],"length":282,"saved":false}
+{"ts":1372855785196,"patch":[[{"diffs":[[0,"\n<body>\r"],[1,"\n\r\nqw\r"],[0,"\n    <%-"]],"start1":194,"start2":194,"length1":16,"length2":22}]],"length":288,"saved":false}
+{"ts":1372855796048,"patch":[[{"diffs":[[0,"dy>\r"],[-1,"\n\r\nqw\r"],[0,"\n   "]],"start1":198,"start2":198,"length1":14,"length2":8}]],"length":282,"saved":false}
