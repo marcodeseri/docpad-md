@@ -33,13 +33,7 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             <!-- /footer-two -->
             
             <div id="footer-three">
-            	<div class="footer-widget clearfix"><h4>Tags</h4><div class="tagcloud"><a href='/tag/ab-testing/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>AB testing</a>
-<a href="/tag/analytics/" class='tag-link-7' title='2 topics' style='font-size: 16.4pt;'>analytics</a>
-<a href="/tag/conversion-rate-optimization/" class='tag-link-6' title='3 topics' style='font-size: 22pt;'>CRO</a>
-<a href="/tag/drupal/" class='tag-link-9' title='1 topic' style='font-size: 8pt;'>drupal</a>
-<a href="/tag/mobile/" class='tag-link-12' title='1 topic' style='font-size: 8pt;'>Mobile</a>
-<a href="/tag/performance/" class='tag-link-8' title='2 topics' style='font-size: 16.4pt;'>performance</a>
-<a href="/tag/ux/" class='tag-link-5' title='3 topics' style='font-size: 22pt;'>ux</a></div>
+            	<div class="footer-widget clearfix"><h4>Tags</h4><div class="tagcloud"><a href='/tag/ab-testing/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>AB testing</a></div>
 </div>            </div>
             <!-- /footer-three -->
             
