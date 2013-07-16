@@ -1,0 +1,23 @@
+<%-@partial('header.html.eco', @)%> 
+    
+    <header id="page-heading">
+        <h1>Blog</h1>    
+    </header>
+
+
+    <div id="post" class="post clearfix">   
+        <% for document,documentIndex  in @getCollection('posts').toJSON(): %>
+            <article class="class="loop-entry clearfix"">
+
+                    <h2><a href="<%= @getCollection('posts').toJSON()[documentIndex].url %>" ><%= @getCollection('posts').toJSON()[documentIndex].title %></a></h2>
+                    <div class="loop-entry-meta">
+                        <span class="awesome-icon-calendar"></span>On <%= @document.date.toDateString() %><span class="awesome-icon-user"></span>
+                    </div>
+
+                    <p><%- @getCollection('posts').toJSON()[documentIndex].content.substr(0, @getCollection('posts').toJSON()[documentIndex].content.indexOf('<!--more')) %></p>       
+                
+            </article>   
+        <% end %>
+    </div>
+    
+<%-@partial('footer.html.eco', @)%> 

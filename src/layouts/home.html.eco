@@ -54,7 +54,7 @@
                 <article class="home-entry ">
                     <div class="home-entry-description">
                         <h3><a href="<%= @getCollection('posts').toJSON()[documentIndex].url %>" ><%= @getCollection('posts').toJSON()[documentIndex].title %></a></h3>
-                               
+                        <p><%- @getCollection('posts').toJSON()[documentIndex].content.substr(0, @getCollection('posts').toJSON()[documentIndex].content.indexOf('<!--more')) %></p>        
                     </div> 
                 </article>
             <% end %>    
