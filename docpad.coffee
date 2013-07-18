@@ -26,6 +26,7 @@ docpadConfig = {
     plugins:
         datefromfilename:
             removeDate: true
+
 }
 
 # Export the DocPad Configuration

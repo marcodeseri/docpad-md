@@ -42,6 +42,6 @@
     
     
 
-    <%-@partial('sidebar.html.eco', @)%> 
+    <%-@partial('sidebar.html', @)%> 
     
 <%-@partial('footer.html.eco', @)%> 

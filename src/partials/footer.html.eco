@@ -33,8 +33,17 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             <!-- /footer-two -->
             
             <div id="footer-three">
-            	<div class="footer-widget clearfix"><h4>Tags</h4><div class="tagcloud"><a href='/tag/ab-testing/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>AB testing</a></div>
-</div>            </div>
+            	<div class="footer-widget clearfix">
+                    <h4>Tags</h4>
+                    <div class="tagcloud">
+                        <% for key, item of @getTagCloud(): %>
+    			<li>
+					<a href="<%= item.url %>" data-tag-count="<%= item.count %>" data-tag-weight="<%= item.weight %>"><%= item.tag %> (<%= item.count %>)</a>
+				</li>
+			<% end %>
+                    </div>
+                </div>
+            </div>
             <!-- /footer-three -->
             
 			<div id="footer-four">
