@@ -48,17 +48,11 @@ _gaq.push(['_setAccount', 'UA-80445-6']);
     s.parentNode.insertBefore(ga, s);
 })();
 //]]></script>
-<link rel='stylesheet' id='slickr-flickr-lightbox-css'  href='/css/lightbox.css?ver=0.5' type='text/css' media='all' />
-<link rel='stylesheet' id='thickbox-css'  href='/css/thickbox.css?ver=20121105' type='text/css' media='all' />
-<link rel='stylesheet' id='slickr-flickr-css'  href='/css/slickr-flickr.css?ver=1.44' type='text/css' media='all' />
-<link rel='stylesheet' id='socialConnect-style-css'  href='/css/socialConnect-style.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='tipTip-style-css'  href='/css/tipTip.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cntctfrmStylesheet-css'  href='/css/style-contact.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='twttrStylesheet-css'  href='/css/style-twitter.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='googlefonts-css'  href='http://fonts.googleapis.com/css?family=PT+Serif:400&subset=latin' type='text/css' media='all' />
-<link rel='stylesheet' id='responsive-css'  href='/css/responsive.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='prettyPhoto-css'  href='/css/prettyPhoto.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='awesome-font-css'  href='/css/awesome-font.css?ver=3.5.1' type='text/css' media='all' />
+
+
+<link rel="text/stylesheeet" href="http://fonts.googleapis.com/css?family=PT+Serif:400&subset=latin" />
+<link  rel="stylesheet" href="/styles/all.min.css" />
+
 <script type='text/javascript' src='/js/jquery.js?ver=1.8.3'></script>
 <script type='text/javascript' src='/js/jquery.lightbox.js?ver=0.5'></script>
 <script type='text/javascript'>
@@ -362,7 +356,45 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 <script type='text/javascript' src='/js/socialConnect.scripts.js?ver=3.5.1'></script>
 <script type='text/javascript' src='/js/hoverIntent.min.js?ver=r6'></script>
 
+<script >(function(){
+	/* Did we just livereload? */
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
 
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		/* Inject socket.io into our page then listen once loaded */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		var readyStateCheckInterval = setInterval(function() {
+  if (document.readyState === "complete") {
+    inject();
+    clearInterval(readyStateCheckInterval);
+  }
+}, 10);
+	}
+})();</script>
 </body>
 </html>
  

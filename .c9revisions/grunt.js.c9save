@@ -1,0 +1,9 @@
+{"ts":1374510381077,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1374510383532,"patch":[[{"diffs":[[1,"module.exports = function(grunt) {\r\n  grunt.loadNpmTasks('grunt-css');\r\n  var gruntConfig = require('./grunt-config.json');\r\n  grunt.initConfig(gruntConfig);\r\n  grunt.registerTask('default', Object.keys(gruntConfig).join(' '));\r\n};"]],"start1":0,"start2":0,"length1":0,"length2":231}]],"length":231,"saved":false}
+{"ts":1374511352635,"patch":[[{"diffs":[[0,"grunt) {\r\n  "],[1,"//"],[0,"grunt.loadNp"]],"start1":26,"start2":26,"length1":24,"length2":26}]],"length":233,"saved":false}
+{"ts":1374511417420,"patch":[[{"diffs":[[0,"re('"],[-1,"./"],[0,"grun"]],"start1":99,"start2":99,"length1":10,"length2":8}]],"length":231,"saved":false}
+{"ts":1374512136202,"patch":[[{"diffs":[[0,"equire('"],[1,"./"],[0,"grunt-co"]],"start1":95,"start2":95,"length1":16,"length2":18}]],"length":233,"saved":false}
+{"ts":1374512454637,"patch":[[{"diffs":[[0,"\r\n  "],[-1,"//"],[0,"grun"]],"start1":34,"start2":34,"length1":10,"length2":8}]],"length":231,"saved":false}
+{"ts":1374513613827,"patch":[[{"diffs":[[0,"re('"],[-1,"./"],[0,"grun"]],"start1":97,"start2":97,"length1":10,"length2":8}]],"length":229,"saved":false}
+{"ts":1374513632391,"patch":[[{"diffs":[[0,"s');\r\n  "],[1,"#"],[0,"var grun"]],"start1":66,"start2":66,"length1":16,"length2":17}]],"length":230,"saved":false}
+{"ts":1374513637022,"patch":[[{"diffs":[[0,"\r\n  "],[-1,"#"],[1,"//"],[0,"var "]],"start1":70,"start2":70,"length1":9,"length2":10}]],"length":231,"saved":false}

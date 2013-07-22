@@ -1,0 +1,14 @@
+{
+  "concat": {
+    "css": {
+      "src": ["out/css/lightbox.css", "out/css/thickbox.css", "out/css/slickr-flickr.css", "out/css/socialConnect-style.css", "out/css/tipTip.css", "out/css/style-contact.css", "out/css/style-twitter.css", "out/css/responsive.css", "out/css/prettyPhoto.css", "out/css/awesome-font.css"],
+      "dest": "out/styles/all.css"
+    }
+  },
+  "cssmin": {
+    "all": {
+      "src": ["out/styles/all.css"],
+      "dest": "out/styles/all.min.css"
+    }
+  }
+}
