@@ -36,6 +36,11 @@ docpadConfig = {
     plugins:
         datefromfilename:
             removeDate: true
+         livereload:
+             enabled: true
+             environments:
+                 dev: #this obviously has to be the env in which you want to enable the plugin 
+                     enabled: true
             
     events:
 

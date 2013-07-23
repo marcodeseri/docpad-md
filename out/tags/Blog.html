@@ -51,7 +51,7 @@ _gaq.push(['_setAccount', 'UA-80445-6']);
 
 
 <link rel="text/stylesheeet" href="http://fonts.googleapis.com/css?family=PT+Serif:400&subset=latin" />
-<link  rel="stylesheet" href="/styles/all.min.css" />
+<link  rel="stylesheet" href="/css/all.min.css" />
 
 <script type='text/javascript' src='/js/jquery.js?ver=1.8.3'></script>
 <script type='text/javascript' src='/js/jquery.lightbox.js?ver=0.5'></script>
@@ -68,6 +68,45 @@ var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","c
 <script type='text/javascript' src='/js/jquery.responsify.init.js?ver=3.5.1'></script>
 <script type='text/javascript' src='/js/custom.js?ver=3.5.1'></script>
 
+<script >(function(){
+	/* Did we just livereload? */
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		/* Inject socket.io into our page then listen once loaded */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		var readyStateCheckInterval = setInterval(function() {
+  if (document.readyState === "complete") {
+    inject();
+    clearInterval(readyStateCheckInterval);
+  }
+}, 10);
+	}
+})();</script>
 
 
 <script type='text/javascript'>
@@ -99,14 +138,14 @@ s.parentNode.insertBefore(po, s);
                     
                         
                             <li class="menu-item menu-item-type-post_type menu-item-object-page inactive">
-                                <a href="/pages/blog">
-                                    Blog
+                                <a href="/pages/about">
+                                    About Me
                                 </a>
                             </li>
                         
                             <li class="menu-item menu-item-type-post_type menu-item-object-page inactive">
-                                <a href="/pages/about">
-                                    About Me
+                                <a href="/pages/blog">
+                                    Blog
                                 </a>
                             </li>
                         
@@ -131,43 +170,43 @@ s.parentNode.insertBefore(po, s);
 <ul>
 
     <li>
-        <a href="/posts/10-steps-data-informed-optimization">10 Steps to Data Informed Optimization</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+        <a href="/posts/google-analytics-introduces-site-speed">Google Analytics Introduces Site Speed</a>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
     <li>
-        <a href="/posts/google-analytics-introduces-site-speed">Google Analytics Introduces Site Speed</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+        <a href="/posts/10-steps-data-informed-optimization">10 Steps to Data Informed Optimization</a>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
     <li>
         <a href="/posts/free-web-optimization-tools">Free Web Optimization Tools</a>
-		<div class="post-date">Monday, July 22, 2013</div>
-    </li>
-
-    <li>
-        <a href="/posts/drupal-7-gzipping-stylesheets-litespeed">Drupal 7: gzipping stylesheets on LiteSpeed</a>
-		<div class="post-date">Monday, July 22, 2013</div>
-    </li>
-
-    <li>
-        <a href="/posts/wireframing-balsamiq-mockups">Wireframing with Balsamiq Mockups</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
     <li>
         <a href="/posts/native-apps-against-web">Native Apps against the Web</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
     <li>
-        <a href="/posts/introducing-ux-channel">Introducing UX Channel</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+        <a href="/posts/drupal-7-gzipping-stylesheets-litespeed">Drupal 7: gzipping stylesheets on LiteSpeed</a>
+		<div class="post-date">Tuesday, July 23, 2013</div>
+    </li>
+
+    <li>
+        <a href="/posts/wireframing-balsamiq-mockups">Wireframing with Balsamiq Mockups</a>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
     <li>
         <a href="/posts/optimizely-easy-way-ab-tes">Optimizely: the easy way to A/B test</a>
-		<div class="post-date">Monday, July 22, 2013</div>
+		<div class="post-date">Tuesday, July 23, 2013</div>
+    </li>
+
+    <li>
+        <a href="/posts/introducing-ux-channel">Introducing UX Channel</a>
+		<div class="post-date">Tuesday, July 23, 2013</div>
     </li>
 
 </ul>
@@ -220,6 +259,14 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 				</li>
 			
     			<li>
+					<a href="/tags/performance.html" data-tag-count="2" data-tag-weight="0.33333333333333337">performance (2)</a>
+				</li>
+			
+    			<li>
+					<a href="/tags/Web-Analytics.html" data-tag-count="1" data-tag-weight="0">Web Analytics (1)</a>
+				</li>
+			
+    			<li>
 					<a href="/tags/Conversion-Rate-Optimization.html" data-tag-count="3" data-tag-weight="0.5283208335737188">Conversion Rate Optimization (3)</a>
 				</li>
 			
@@ -232,11 +279,7 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 				</li>
 			
     			<li>
-					<a href="/tags/performance.html" data-tag-count="2" data-tag-weight="0.33333333333333337">performance (2)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Web-Analytics.html" data-tag-count="1" data-tag-weight="0">Web Analytics (1)</a>
+					<a href="/tags/Mobile.html" data-tag-count="1" data-tag-weight="0">Mobile (1)</a>
 				</li>
 			
     			<li>
@@ -245,10 +288,6 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 			
     			<li>
 					<a href="/tags/UX.html" data-tag-count="1" data-tag-weight="0">UX (1)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Mobile.html" data-tag-count="1" data-tag-weight="0">Mobile (1)</a>
 				</li>
 			
     			<li>

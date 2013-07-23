@@ -7,8 +7,8 @@
   },
   "cssmin": {
     "all": {
-      "src": ["out/styles/all.css"],
-      "dest": "out/styles/all.min.css"
+      "src": ["out/css/all.css"],
+      "dest": "out/css/all.min.css"
     }
   }
 }
