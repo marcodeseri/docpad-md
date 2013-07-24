@@ -25,6 +25,17 @@ docpadConfig = {
                 return value.indexOf('.min.css') > -1
             _.map styles, (value) ->
                 return value.replace 'out', ''
+                
+        getGruntedScripts: ->
+            _ = require 'underscore'
+            scripts = []
+            gruntConfig = require('./grunt-config.json')
+            _.each gruntConfig, (value, key) ->
+                scripts = scripts.concat _.flatten _.pluck value, 'dest'
+            scripts = _.filter scripts, (value) ->
+                return value.indexOf('.min.js') > -1
+            _.map scripts, (value) ->
+                return value.replace 'out', ''
             
     collections:
         posts: ->
@@ -68,7 +79,17 @@ docpadConfig = {
 
             # Chain
             @
-
+    
+     environments:  # default
+        dev:  # default
+            # Only do these if we are running standalone via the `docpad` executable
+            checkVersion: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
+            welcome: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
+            prompts: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
+            port: process.env.PORT
+    
+    
+    env: 'dev'
 }
 
 # Export the DocPad Configuration
