@@ -25,7 +25,7 @@ docpadConfig = {
                 return value.indexOf('.min.css') > -1
             _.map styles, (value) ->
                 return value.replace 'out', ''
-                
+
         getGruntedScripts: ->
             _ = require 'underscore'
             scripts = []
@@ -36,7 +36,7 @@ docpadConfig = {
                 return value.indexOf('.min.js') > -1
             _.map scripts, (value) ->
                 return value.replace 'out', ''
-            
+                
     collections:
         posts: ->
             @getCollection("html").findAllLive({relativeOutDirPath: 'posts'},[{date:-1}])
@@ -47,21 +47,14 @@ docpadConfig = {
     plugins:
         datefromfilename:
             removeDate: true
-         livereload:
-             enabled: true
-             environments:
-                 dev: #this obviously has to be the env in which you want to enable the plugin 
-                     enabled: true
-            
-    events:
 
+###
+    events:
         writeAfter: (opts,next) ->
             docpad = @docpad
             rootPath = docpad.config.rootPath
             balUtil = require 'bal-util'
             _ = require 'underscore'
-
-            console.log(rootPath);
 
             # Make sure to register a grunt `default` task
             command = ["#{rootPath}/node_modules/.bin/grunt", 'default']
@@ -71,27 +64,16 @@ docpadConfig = {
                 src = []
                 gruntConfig = require './grunt-config.json'
                 _.each gruntConfig, (value, key) ->
-                    src = src.concat _.flatten _.pluck value, 'src'
-            _.each src, (value) ->
-                balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
+                src = src.concat _.flatten _.pluck value, 'src'
+                _.each src, (value) ->
+                    balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
                 balUtil.spawn ['find', '.', '-type', 'd', '-empty', '-exec', 'rmdir', '{}', '\;'], {cwd:rootPath+'/out', output:false}, ->
                 next()
 
             # Chain
             @
-    
-     environments:  # default
-        dev:  # default
-            # Only do these if we are running standalone via the `docpad` executable
-            checkVersion: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
-            welcome: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
-            prompts: process.argv.length >= 2 and /docpad$/.test(process.argv[1])  # default
-            port: process.env.PORT
-    
-    
-    env: 'dev'
+###
 }
 
 # Export the DocPad Configuration
 module.exports = docpadConfig
-

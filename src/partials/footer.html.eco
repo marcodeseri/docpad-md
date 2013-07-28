@@ -36,11 +36,11 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             	<div class="footer-widget clearfix">
                     <h4>Tags</h4>
                     <div class="tagcloud">
-                        <% for key, item of @getTagCloud(): %>
-    			<li>
-					<a href="<%= item.url %>" data-tag-count="<%= item.count %>" data-tag-weight="<%= item.weight %>"><%= item.tag %> (<%= item.count %>)</a>
-				</li>
-			<% end %>
+                        <ul>
+                            <% for key, item of @getTagCloud(): %>
+                                <li><a href="<%= item.url %>" data-tag-count="<%= item.count %>" data-tag-weight="<%= item.weight %>"><%= item.tag %> (<%= item.count %>)</a></li>
+                            <% end %>
+                        </ul>    
                     </div>
                 </div>
             </div>
@@ -78,6 +78,6 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 <script type='text/javascript' src='/js/socialConnect.scripts.js?ver=3.5.1'></script>
 <script type='text/javascript' src='/js/hoverIntent.min.js?ver=r6'></script>
 
-<%- @getBlock("scripts").toHTML() %>
+
 </body>
 </html>

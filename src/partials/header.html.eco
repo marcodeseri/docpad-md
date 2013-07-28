@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-
+<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!--[if lt IE 9]>
@@ -22,9 +22,8 @@
 	<link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/>
 <![endif]-->
 
-
-
 <meta name="description" content="<%= @document.description %>"/>
+
 <link rel="author" href="marco deseri"/>
 <meta property='og:locale' content='en_US'/>
 <meta property='og:type' content='website'/>
@@ -49,26 +48,17 @@ _gaq.push(['_setAccount', 'UA-80445-6']);
 })();
 //]]></script>
 
+<script type='text/javascript' src='/js/all.min.js'></script>
 
-<link rel="text/stylesheeet" href="http://fonts.googleapis.com/css?family=PT+Serif:400&subset=latin" />
-<%- @getBlock('styles').add(@getGruntedStyles()).toHTML() %>
 
-<script type='text/javascript' src='/js/jquery.js?ver=1.8.3'></script>
-<script type='text/javascript' src='/js/jquery.lightbox.js?ver=0.5'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"\/images\/ui\/loadingAnimation.gif","closeImage":"/js\/thickbox\/tb-close.png"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/js/thickbox.js?ver=3.1-20121105'></script>
 
 
-<script type='text/javascript' src='/js/jquery.flexslider-min.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/jquery.uniform.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/jquery.responsify.init.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/custom.js?ver=3.5.1'></script>
-
-<%- @getBlock('scripts').toHTML() %>
+<link rel="text/stylesheeet" href="/ccs/all.min.css" />
 
 
 <script type='text/javascript'>

@@ -1,8 +1,14 @@
 {
+    "min": {
+    "js": {
+      "src": ["src/files/js/jquery.js", "src/files/js/jquery.lightbox.js", "src/files/js/thickbox.js", "src/files/js/galleria.min.js", "src/files/js/jquery.flexslider-min.js", "src/files/js/prettyPhoto.js", "src/files/js/jquery.uniform.js", "src/files/js/responsify.init.js.", "src/files/js/custom.js"],
+      "dest": "out/js/all.min.js"
+    }
+  },
   "concat": {
     "css": {
-      "src": ["out/css/lightbox.css", "out/css/thickbox.css", "out/css/slickr-flickr.css", "out/css/socialConnect-style.css", "out/css/tipTip.css", "out/css/style-contact.css", "out/css/style-twitter.css", "out/css/responsive.css", "out/css/prettyPhoto.css", "out/css/awesome-font.css"],
-      "dest": "out/styles/all.css"
+      "src": ["src/files/css/lightbox.css", "src/files/css/thickbox.css", "src/files/css/slickr-flickr.css", "src/files/css/socialConnect-style.css", "src/files/css/tipTip.css", "src/files/css/style-contact.css", "src/files/css/style-twitter.css", "src/files/css/responsive.css", "src/files/css/prettyPhoto.css", "src/files/css/awesome-font.css"],
+      "dest": "out/css/all.css"
     }
   },
   "cssmin": {

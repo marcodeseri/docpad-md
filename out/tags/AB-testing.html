@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-
+<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!--[if lt IE 9]>
@@ -22,9 +22,8 @@
 	<link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/>
 <![endif]-->
 
-
-
 <meta name="description" content=""/>
+
 <link rel="author" href="marco deseri"/>
 <meta property='og:locale' content='en_US'/>
 <meta property='og:type' content='website'/>
@@ -49,64 +48,17 @@ _gaq.push(['_setAccount', 'UA-80445-6']);
 })();
 //]]></script>
 
+<script type='text/javascript' src='/js/all.min.js'></script>
 
-<link rel="text/stylesheeet" href="http://fonts.googleapis.com/css?family=PT+Serif:400&subset=latin" />
-<link  rel="stylesheet" href="/css/all.min.css" />
 
-<script type='text/javascript' src='/js/jquery.js?ver=1.8.3'></script>
-<script type='text/javascript' src='/js/jquery.lightbox.js?ver=0.5'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"\/images\/ui\/loadingAnimation.gif","closeImage":"/js\/thickbox\/tb-close.png"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/js/thickbox.js?ver=3.1-20121105'></script>
 
 
-<script type='text/javascript' src='/js/jquery.flexslider-min.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/jquery.uniform.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/jquery.responsify.init.js?ver=3.5.1'></script>
-<script type='text/javascript' src='/js/custom.js?ver=3.5.1'></script>
-
-<script >(function(){
-	/* Did we just livereload? */
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
-
-/* Listen for the regenerated event and perform a reload of the page when the event occurs */
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		/* Inject socket.io into our page then listen once loaded */
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		var readyStateCheckInterval = setInterval(function() {
-  if (document.readyState === "complete") {
-    inject();
-    clearInterval(readyStateCheckInterval);
-  }
-}, 10);
-	}
-})();</script>
+<link rel="text/stylesheeet" href="/ccs/all.min.css" />
 
 
 <script type='text/javascript'>
@@ -171,7 +123,7 @@ s.parentNode.insertBefore(po, s);
 
     <li>
         <a href="/posts/optimizely-easy-way-ab-tes">Optimizely: the easy way to A/B test</a>
-		<div class="post-date">Wednesday, July 24, 2013</div>
+		<div class="post-date">Saturday, July 27, 2013</div>
     </li>
 
 </ul>
@@ -214,51 +166,31 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             	<div class="footer-widget clearfix">
                     <h4>Tags</h4>
                     <div class="tagcloud">
-                        
-    			<li>
-					<a href="/tags/analytics.html" data-tag-count="2" data-tag-weight="0.33333333333333337">analytics (2)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Blog.html" data-tag-count="8" data-tag-weight="1">Blog (8)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/performance.html" data-tag-count="2" data-tag-weight="0.33333333333333337">performance (2)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Web-Analytics.html" data-tag-count="1" data-tag-weight="0">Web Analytics (1)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Conversion-Rate-Optimization.html" data-tag-count="3" data-tag-weight="0.5283208335737188">Conversion Rate Optimization (3)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/CRO.html" data-tag-count="3" data-tag-weight="0.5283208335737188">CRO (3)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/ux.html" data-tag-count="3" data-tag-weight="0.5283208335737188">ux (3)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/UX.html" data-tag-count="1" data-tag-weight="0">UX (1)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/Mobile.html" data-tag-count="1" data-tag-weight="0">Mobile (1)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/drupal.html" data-tag-count="1" data-tag-weight="0">drupal (1)</a>
-				</li>
-			
-    			<li>
-					<a href="/tags/AB-testing.html" data-tag-count="1" data-tag-weight="0">AB testing (1)</a>
-				</li>
-			
+                        <ul>
+                            
+                                <li><a href="/tags/analytics.html" data-tag-count="2" data-tag-weight="0.33333333333333337">analytics (2)</a></li>
+                            
+                                <li><a href="/tags/Blog.html" data-tag-count="8" data-tag-weight="1">Blog (8)</a></li>
+                            
+                                <li><a href="/tags/Conversion-Rate-Optimization.html" data-tag-count="3" data-tag-weight="0.5283208335737188">Conversion Rate Optimization (3)</a></li>
+                            
+                                <li><a href="/tags/CRO.html" data-tag-count="3" data-tag-weight="0.5283208335737188">CRO (3)</a></li>
+                            
+                                <li><a href="/tags/ux.html" data-tag-count="3" data-tag-weight="0.5283208335737188">ux (3)</a></li>
+                            
+                                <li><a href="/tags/performance.html" data-tag-count="2" data-tag-weight="0.33333333333333337">performance (2)</a></li>
+                            
+                                <li><a href="/tags/Web-Analytics.html" data-tag-count="1" data-tag-weight="0">Web Analytics (1)</a></li>
+                            
+                                <li><a href="/tags/drupal.html" data-tag-count="1" data-tag-weight="0">drupal (1)</a></li>
+                            
+                                <li><a href="/tags/UX.html" data-tag-count="1" data-tag-weight="0">UX (1)</a></li>
+                            
+                                <li><a href="/tags/Mobile.html" data-tag-count="1" data-tag-weight="0">Mobile (1)</a></li>
+                            
+                                <li><a href="/tags/AB-testing.html" data-tag-count="1" data-tag-weight="0">AB testing (1)</a></li>
+                            
+                        </ul>    
                     </div>
                 </div>
             </div>
@@ -296,45 +228,7 @@ For the past 7 years I have been working on large scale e-commerce websites serv
 <script type='text/javascript' src='/js/socialConnect.scripts.js?ver=3.5.1'></script>
 <script type='text/javascript' src='/js/hoverIntent.min.js?ver=r6'></script>
 
-<script >(function(){
-	/* Did we just livereload? */
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
 
-/* Listen for the regenerated event and perform a reload of the page when the event occurs */
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		/* Inject socket.io into our page then listen once loaded */
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		var readyStateCheckInterval = setInterval(function() {
-  if (document.readyState === "complete") {
-    inject();
-    clearInterval(readyStateCheckInterval);
-  }
-}, 10);
-	}
-})();</script>
 </body>
 </html>
  

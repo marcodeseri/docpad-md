@@ -7,7 +7,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.46.1",
+    "docpad": "~6.46.3",
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-coffeescript": "~2.2.2",
@@ -16,7 +16,7 @@
     "docpad-plugin-ghpages": "~2.2.0",
     "docpad-plugin-related": "~2.0.5",
     "docpad-plugin-tagging": "~2.0.1",
-    "docpad-plugin-partials": "~2.7.0",
+    "docpad-plugin-partials": "~2.7.1",
     "grunt": "~0.3.17",
     "grunt-css": "~0.3.2",
     "bal-util": "~1.15.3",
