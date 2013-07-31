@@ -16,17 +16,16 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             
             <div id="footer-two">
             	<div class="footer-widget clearfix"><h4>Categories</h4>		<ul>
-	<li class="cat-item cat-item-4"><a href="/category/content/" title="View all posts filed under Blog">Blog</a>
-<ul class='children'>
-	<li class="cat-item cat-item-10"><a href="/category/content/conversion-rate-optimization-content/" title="View all posts filed under Conversion Rate Optimization">Conversion Rate Optimization</a>
-</li>
-	<li class="cat-item cat-item-12"><a href="/category/content/mobile/" title="View all posts filed under Mobile">Mobile</a>
-</li>
-	<li class="cat-item cat-item-11"><a href="/category/content/ux-content/" title="View all posts filed under UX">UX</a>
-</li>
-	<li class="cat-item cat-item-13"><a href="/category/content/web-analytics/" title="View all posts filed under Web Analytics">Web Analytics</a>
-</li>
-</ul>
+	<li class="cat-item cat-item-4"><a href="/pages/blog/" title="View all posts filed under Blog">Blog</a>
+        <ul class='children'>
+            <% for page in @getCollection("categories").toJSON(): %>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page <%= if page.id is @document.id then 'active' else 'inactive' %>">
+                    <a href="/tags/ux.html">UX</a>
+                    <a href="/tags/mobile.html">Mobile</a>
+                    <a href="/tags/analytics.html">Web Analytics</a>
+                </li>
+            <% end %>
+        </ul>
 </li>
 		</ul>
 </div>            </div>

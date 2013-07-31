@@ -2,3 +2,5 @@
 {"contributors":[],"silentsave":false,"ts":1374149161748,"patch":[[{"diffs":[[0,"ags:"],[-1,"\n-"],[0," "],[1,"["],[0,"Blog"],[-1,"\n- ux\n- UX"],[1,", ux]"],[0,"\nsta"]],"start1":48,"start2":48,"length1":25,"length2":19}]],"length":632,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1374950057350,"patch":[[{"diffs":[[0,"rc=\""],[-1,"http://www.marcodeseri.com/sites/default/files/screensho"],[1,"/images/conten"],[0,"t/ux"]],"start1":536,"start2":536,"length1":64,"length2":22}]],"length":590,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1374950329624,"patch":[[{"diffs":[[0,"ed</a>.\n"],[1,"<br/><br/>\n"],[0,"<img alt"]],"start1":515,"start2":515,"length1":16,"length2":27}]],"length":601,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1375106846973,"patch":[[{"diffs":[[0,"s: ["],[-1,"Blog, "],[0,"ux]\n"]],"start1":50,"start2":50,"length1":14,"length2":8}]],"length":595,"saved":false}
+{"ts":1375106950573,"patch":[[{"diffs":[[0,"ry: "],[-1,"blog"],[1,"UX"],[0,"\n---"]],"start1":107,"start2":107,"length1":12,"length2":10}]],"length":593,"saved":false}
