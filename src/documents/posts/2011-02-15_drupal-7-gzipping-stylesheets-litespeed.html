@@ -11,13 +11,14 @@ published: true
 
 If you care about Web Performance Optimization, you will love Drupal 7: its core takes care of both aggregating and compressing your css and js files.
 <!--more-->
-It's just a matter of enabling this option in the Configuration &gt; Performance section. Your site will load faster, serving gzipped files and reducing the number of http requests.
+<div>It's just a matter of enabling this option in the Configuration &gt; Performance section. Your site will load faster, serving gzipped files and reducing the number of http requests.
 
 However, if you - like me - run your website on a LightSpeed webserver, you could be facing some issues. While css and js are successfully served gzipped and work fine on most browsers (safari, chrome, ie, opera), on Firefox you could see a completely unstyled page, throwing js errors at you.
 
 Chances are your LightSpeed webserver is already gzipping css and js files for you, and your .htaccess forces that as well.
 
-The problem is easily fixable; just head towards the end of your .htaccess and look for this block of code:
+The problem is easily fixable; just head towards the end of your .htaccess and look for this block of code:</div>
+<code>
 #Serve gzip compressed CSS files if they exist and the client accepts gzip.
 RewriteCond %{HTTP:Accept-encoding} gzip RewriteCond %{REQUEST_FILENAME}\.gz -s
 RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
@@ -33,8 +34,9 @@ RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
 Header append Content-Encoding gzip
 # Force proxies to cache gzipped &amp; non-gzipped css/js files separately.
 Header append Vary Accept-Encoding
+</code>
 
-Comment it and you're done ;)
-If you are still having problems, check your css and js headers with Firebug and verify that files are being gzipped.
+<p>Comment it and you're done ;)
+If you are still having problems, check your css and js headers with Firebug and verify that files are being gzipped.</p>
 
-You can find other interesting ideas about this topic at Aggregate and compress CSS files" and "Aggregate JavaScript files" in performance settings, is not working on drupal.org.
+<p>You can find other interesting ideas about this topic at Aggregate and compress CSS files" and "Aggregate JavaScript files" in performance settings, is not working on drupal.org.</p>
