@@ -18,15 +18,11 @@ For the past 7 years I have been working on large scale e-commerce websites serv
             	<div class="footer-widget clearfix"><h4>Categories</h4>		<ul>
 	<li class="cat-item cat-item-4"><a href="/pages/blog/" title="View all posts filed under Blog">Blog</a>
         <ul class='children'>
-            <% for page in @getCollection("categories").toJSON(): %>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page <%= if page.id is @document.id then 'active' else 'inactive' %>">
-                    <a href="/tags/ux.html">UX</a>
-                    <a href="/tags/mobile.html">Mobile</a>
-                    <a href="/tags/analytics.html">Web Analytics</a>
-                </li>
-            <% end %>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/tags/ux.html">UX</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/tags/mobile.html">Mobile</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/tags/analytics.html">Web Analytics</a></li>
         </ul>
-</li>
+    </li>
 		</ul>
 </div>            </div>
             <!-- /footer-two -->
