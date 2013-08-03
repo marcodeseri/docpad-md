@@ -7,21 +7,21 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.46.3",
+    "docpad": "~6.47.0",
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-coffeescript": "~2.2.2",
-    "docpad-plugin-datefromfilename": "~2.0.1",
+    "docpad-plugin-datefromfilename": "~2.0.3",
     "docpad-plugin-cleanurls": "~2.5.0",
-    "docpad-plugin-ghpages": "~2.2.0",
+    "docpad-plugin-ghpages": "~2.3.0",
     "docpad-plugin-related": "~2.0.5",
     "docpad-plugin-tagging": "~2.0.1",
-    "docpad-plugin-partials": "~2.7.1",
+    "docpad-plugin-partials": "~2.7.2",
     "grunt": "~0.3.17",
     "grunt-css": "~0.3.2",
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
-    "docpad-plugin-livereload": "~2.4.0"
+    "docpad-plugin-livereload": "~2.5.1"
   },
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
