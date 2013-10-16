@@ -13,33 +13,7 @@
     </div>
 
 
-    <section id="home-highlights" class="clearfix">
-                
-        <article class="hp-highlight ">
-            <h2><a href="/hp-highlights/fastpath" title="fastPath">fastPath</a></h2>            
-            <p>fastPath is a chrome extension that aufofills forms for you and helps you checkout faster and safer.</p>
-        </article>
-                
-        <article class="hp-highlight ">
-            <h2><a href="/hp-highlights/the-checkout-experiment" title="Checkout experiment">Checkout experiment</a></h2>
-            
-            <p>A live study on checkout form usability.</p>
-        </article>        
-                
-        <article class="hp-highlight  responsive-clear">
-            <h2><a href="hp-highlights/ux-channel" title="UX Channel">UX Channel</a></h2>
-            
-            <p>The best videos and updates for User Experience</p>
-        </article>        
-                
-        <article class="hp-highlight remove-margin">
-            <h2><a href="/hp-highlights/mobilitix" title="Mobilitix">Mobilitix</a></h2>
-            
-            <p>Mobilitix is a Google Analytics mobile application. It&#8217;s the easy way to access your reports when you are on the go.</p>
-        </article>
-        
-        <div class="clear"></div>    
-    </section>
+   
 
 
     <section id="home-posts" class="clearfix">
