@@ -1,4 +1,5 @@
-<%-@partial('header.html.eco', @)%> 
+<%-@partial('header.html.eco', @)%>
+    
     <header id="page-heading">
         <h1>Blog</h1>	
     	<nav id="single-nav" class="clearfix"> 
